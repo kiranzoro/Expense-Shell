@@ -41,9 +41,8 @@ curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expe
 VALIDATE $? "Downloading fronted.zip"
 
 cd /usr/share/nginx/html
-
-unzip /tmp/frontend.zip
-
+unzip /tmp/frontend.zip  &>> $LOGFILE
+VALIDATE $? "Unzipping fronted.zip"
 
 cp /home/ec2-user/Expense-Shell/expense.conf /etc/nginx/default.d/expense.conf
 
