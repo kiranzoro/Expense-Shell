@@ -8,7 +8,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-echo "Please enter DB Password:"
+
 
 
 VALIDATE(){
@@ -42,5 +42,5 @@ then
     useradd expense
     VALIDATE $? "Creating User Expense"
 else
-    "User Already Added ..... $Y Skpiing $N"
+    echo -e "User Already Added ..... $Y Skpiing $N"
 fi
