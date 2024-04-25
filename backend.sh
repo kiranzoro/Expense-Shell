@@ -37,10 +37,10 @@ VALIDATE $? "Installing NodeJs"
 
 
 useradd expense
-if [ $? -ne 0 ]
-then
-    useradd expense
-    VALIDATE $? "Creating User Expense"
-else
-    "User Already Added ..... $Y Skpiing $N"
-fi
+#if [ $? -ne 0 ]
+#then
+ #   useradd expense
+VALIDATE $? "Creating User Expense"
+#else
+ #   "User Already Added ..... $Y Skpiing $N"
+#fi
