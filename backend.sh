@@ -36,7 +36,7 @@ dnf install nodejs -y &>> $LOGFILE
 VALIDATE $? "Installing NodeJs"
 
 
-id expense
+id expense &>> $LOGFILE
 if [ $? -ne 0 ]
 then
     useradd expense
@@ -44,3 +44,6 @@ then
 else
     echo -e "User Already Added ..... $Y Skpiing $N"
 fi
+
+mkdir /app
+VALIDATE $? "Creating App directory" 
