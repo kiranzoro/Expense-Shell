@@ -45,11 +45,11 @@ else
     echo -e "User Already Added ..... $Y Skpiing $N"
 fi
 
-cd /app &>> $LOGFILE
-if [ $? -ne 0 ]
-then
-    mkdir /app
-    VALIDATE $? "Creating App directory" 
-else
-    echo "App Diretory Already Exists"
-fi
+mkdir -p /app 
+#if [ $? -ne 0 ]
+#then
+   # mkdir /app
+VALIDATE $? "Creating App directory" 
+#else
+#echo "App Diretory Already Exists"
+#fi
