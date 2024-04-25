@@ -44,7 +44,6 @@ cd /usr/share/nginx/html
 
 unzip /tmp/frontend.zip
 
-vim /etc/nginx/default.d/expense.conf
 
 cp /home/ec2-user/Expense-Shell/expense.conf /etc/nginx/default.d/expense.conf
 
